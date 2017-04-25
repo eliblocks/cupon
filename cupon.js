@@ -15,7 +15,18 @@ function getDeals() {
 function cardString(deal) {
   var cardString = `<div class="col-md-5">
                       <div class="card deal-card">
-                        <h4 class="card-title deal-title">${deal.merchant.name}</h4>
+                        <img class="card=img-top" src="${deal.largeImageUrl}">
+                        <div class="card-block">
+                          <p deal-title">${deal.title}</p>
+                        </div>
+                        <div class="card-block">
+                          <span class="price">
+                            ${deal.options[0].price.formattedAmount}
+                          </span>
+                          <span class="quantity">
+                            ${deal.soldQuantityMessage} bought
+                          </span>
+                        </div>
                       </div>
                     </div>`
   return cardString;
